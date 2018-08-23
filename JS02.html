@@ -1,0 +1,28 @@
+<!-- JS可以写在head/body; 可以外部.js文件引入；变量可以多段JS脚本共享-->
+
+<html>
+  <head>
+    <title>JS test code</title>
+	  <script type = "text/javascript">
+        var text;
+        text = "The first JS code!";
+      </script>
+  </head>
+  <body>
+    <br>
+      <h1>----Text from html----</h1>
+    <br>
+	  The first JS code!
+	<br>
+      <h1>----Text from JS----</h1>
+    <br>
+      <script language="javascript">
+        document.write(text);
+      </script>
+    <br>
+      <h1>----Text from external JS----</h1>
+    <br>
+      <Script language = "javascript" src = "./JS02.js">	
+      </Script>
+  </body>
+</html>
