@@ -1,0 +1,23 @@
+<html>
+	<head>
+		<title>Form Verification 表单验证</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+		function check()
+		{
+			if(document.test.t.value=="")
+				{
+					alert("不能提交空值，请输入！");
+					return false;
+				}
+			return true;
+		}
+		</script>
+	</head>
+	<body>
+	<form name="test" action="JS01.html">
+	<input type="text" name="t"/>
+	<input type="submit" name="submit" value="OK" onclick="JavaScript:return check()"/>
+	</form>
+	</body>
+</html>
