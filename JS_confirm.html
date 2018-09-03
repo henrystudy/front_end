@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>confirm确认框</title>
+		<meta charset="UTF-8">
+		<script type="text/javascript">
+		<!--注意方法名不能跟关键字重名直接用confirm()-->
+		function confirmit()
+		{
+			if(confirm("你确认删除么？"))
+				{
+					document.test.submit();
+				}
+		}
+		</script>
+	</head>
+	<body>
+	<form name="test" action="JS01.html">
+		<input type="button" name="delete" value="删除文件" onclick="JavaScript:confirmit()"/>
+	</form>
+	</body>
+</html>
