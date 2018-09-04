@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<title>表单验证</title>
+		<meta charset="utf-8">
+		
+		<script type="text/javascript" src="script/regcheck.js"></script>
+		<script type="text/javascript">
+			function checkUN()
+			{
+				if(!checkUserName(document.form.username.value.toLowerCase()))
+					{alert('ok');}
+			}
+		</script>
+	</head>
+	
+	<body>
+		<form action="JS01_00.html" method="get" onSubmit="return checkdata()">
+			<table width="750"  align="center" border="2">
+				<tr>
+					<td colspan="2" align="center">用户注册</td>
+				</tr>
+				<tr>
+					<td>用户名：</td>
+					<td>
+						<input type=text name="username" size="30" maxlength="10" onblur="checkUserName(this.value.toLowerCase())">
+						<!-- <div id="usernameErr"></div> div另起一行，span是行内块-->
+						<span id="usernameErr"></span>
+					</td>
+				</tr>
+				<tr>
+					<td>密码：</td>
+					<td>
+						<input type=password name="pwd" size="15" maxlength="12">
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>
